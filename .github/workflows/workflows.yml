@@ -1,18 +1,15 @@
 name: workflow 1
-on: push
-jobs:
-    youssef:
-        runs-on: ubuntu-latestname: workflow 1
+
 on: push
 
-    jobs:
-        youssef:
-          runs-on: ubuntu-latest
-          steps:
-            - name: Welcome 
-              run: |
-                echo "Hello world"
-                sudo apt update -y
-                sudo apt install cowsay -y
-                cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
-                cat dragon.txt
+jobs:
+  youssef:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome 
+        run: |
+          echo "Hello world"
+          sudo apt update -y
+          sudo apt install cowsay -y
+          cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+          cat dragon.txt
